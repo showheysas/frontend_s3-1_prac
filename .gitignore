@@ -1,3 +1,10 @@
+#ChatGPTの回答に従い追加
+node_modules/
+.next/
+.env
+
+#これ以降は最初から存在
+
 # Logs
 logs
 *.log
