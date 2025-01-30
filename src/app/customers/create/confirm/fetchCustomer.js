@@ -1,5 +1,6 @@
 export default async function fetchCustomer(id) {
-  const res = await fetch(`http://localhost:8000/customers?customer_id=${id}`, {
+  const apiEndpoint = process.env.NEXT_PUBLIC_API_POINT;
+  const res = await fetch(`${apiEndpoint}/customers?customer_id=${id}`, {
     cache: "no-cache",
   });
   if (!res.ok) {
