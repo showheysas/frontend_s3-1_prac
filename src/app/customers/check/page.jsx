@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic' //デプロイ時エラー対処
 import OneCustomerInfoCard from "@/app/components/one_customer_info_card.jsx";
 
 async function fetchCustomer(id) {
