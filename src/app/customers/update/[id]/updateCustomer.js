@@ -11,7 +11,7 @@ export default async function updateCustomer(formData) {
     gender: updated_gender,
   });
 
-  const res = await fetch(process.env.NEXT_PUBLIC_API_ENDPOINT + `/customers?customer_id=${id}`, {
+  const res = await fetch(process.env.NEXT_PUBLIC_API_ENDPOINT + `/customers?customer_id=${customer_id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
