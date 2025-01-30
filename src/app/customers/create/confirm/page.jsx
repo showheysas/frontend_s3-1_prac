@@ -3,6 +3,7 @@ import OneCustomerInfoCard from "@/app/components/one_customer_info_card.jsx";
 import fetchCustomer from "./fetchCustomer";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
+import { Suspense } from "react"; //（デプロイ時エラー処理）
 
 export default function ConfirmPageWrapper() {
   return (
@@ -18,6 +19,7 @@ function ConfirmPage() {
   const customer_id = useSearchParams().get("customer_id");
   const [customer, setCustomer] = useState(null);
 
+  // メインコンポーネントをSuspenseでラップ（デプロイ時エラー処理）
   useEffect(() => {
     const fetchAndSetCustomer = async () => {
       const customerData = await fetchCustomer(customer_id);
