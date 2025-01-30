@@ -1,6 +1,6 @@
 export default async function deleteCustomer(id) {
   const res = await fetch(
-    process.env.API_ENDPOINT + `/customers?customer_id=${id}`,
+    process.env.NEXT_PUBLIC_API_ENDPOINT + `/customers?customer_id=${id}`,
     {
       method: "DELETE",
     }
